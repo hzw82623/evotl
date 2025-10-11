@@ -81,7 +81,14 @@ def _write_matrix_block(fh, K: List[List[float]], comment: str):
         end = ",\n" if i < 5 else ";\n"
         fh.write(f"            {row}{end}")
 
-def write_beam_file(tip: TipData, grid: BladeGrid, name: str, nu: float, out_path: str) -> None:
+def write_beam_file(
+    tip: TipData,
+    grid: BladeGrid,
+    name: str,
+    nu: float,
+    out_path: str,
+    y_sign: float = 1.0,
+) -> None:
     """
     Write blade.beam: one 'beam3:' block per element with three nodes and two 'linear elastic generic, matr' blocks.
 
@@ -103,16 +110,17 @@ def write_beam_file(tip: TipData, grid: BladeGrid, name: str, nu: float, out_pat
         f.write("# blade.beam\n")
         f.write(f"# name={name}\n")
         for eidx, ((x1, xm, x2), (x_ev1, x_ev2)) in enumerate(zip(grid.elements, grid.eval_points), start=1):
-            # Node ids follow end–mid–end indexing: (2*i+1, 2*i+2, 2*i+3)
+            # Node ids follow end–mid–end indexing with shared nodes between elements:
+            # (2*eidx-1, 2*eidx, 2*eidx+1) for 1-based eidx
             n1 = 2*eidx - 1
             n2 = 2*eidx
             n3 = 2*eidx + 1
 
             # Shear-center offsets at the three node positions (w.r.t NEUTR => YCT-YNA, ZCT-ZNA)
             def yz_sc(xpos: float):
-                yct = grid.interp_tip("YCT", xpos)
+                yct = y_sign * grid.interp_tip("YCT", xpos)
                 zct = grid.interp_tip("ZCT", xpos)
-                yna = grid.interp_tip("YNA", xpos)
+                yna = y_sign * grid.interp_tip("YNA", xpos)
                 zna = grid.interp_tip("ZNA", xpos)
                 return (yct - yna, zct - zna)
 
@@ -143,10 +151,10 @@ def write_beam_file(tip: TipData, grid: BladeGrid, name: str, nu: float, out_pat
                 EJY  = grid.interp_tip("EJY", xev)
                 EJZ  = grid.interp_tip("EJZ", xev)
                 GJ   = grid.interp_tip("GJ", xev)
-                rot  = grid.interp_tip("ROTAN_deg", xev)
-                yct  = grid.interp_tip("YCT", xev)
+                rot  = grid.interp_tip("ROTAN_deg", xev) * y_sign
+                yct  = y_sign * grid.interp_tip("YCT", xev)
                 zct  = grid.interp_tip("ZCT", xev)
-                yna  = grid.interp_tip("YNA", xev)
+                yna  = y_sign * grid.interp_tip("YNA", xev)
                 zna  = grid.interp_tip("ZNA", xev)
                 Y1   = yct - yna
                 Z1   = zct - zna

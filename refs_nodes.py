@@ -20,7 +20,7 @@ from grid import BladeGrid
 def _f(val: float) -> str:
     return f"{val:.10f}"
 
-def write_refs(tip: TipData, grid: BladeGrid, name: str, out_path: str) -> None:
+def write_refs(tip: TipData, grid: BladeGrid, name: str, out_path: str, y_sign: float = 1.0) -> None:
     """
     Write blade.ref including FEATH/NEUTR/BODY for each node.
 
@@ -67,7 +67,7 @@ def write_refs(tip: TipData, grid: BladeGrid, name: str, out_path: str) -> None:
             f.write(f"    reference, CURR_ROTOR + BASE, null;\n\n")
 
             # NEUTR: translate (0, YNA, ZNA) from FEATH; same orientation (eye)
-            YNA = grid.interp_tip("YNA", x)
+            YNA = y_sign * grid.interp_tip("YNA", x)
             ZNA = grid.interp_tip("ZNA", x)
             f.write(f"reference: CURR_ROTOR + CURR_{name} + NEUTR + {i}, #gen ref\n")
             f.write(f"    reference, CURR_ROTOR + CURR_{name} + FEATH + {i}, 0., {_f(YNA)}, {_f(ZNA)},\n")
@@ -76,7 +76,7 @@ def write_refs(tip: TipData, grid: BladeGrid, name: str, out_path: str) -> None:
             f.write(f"    reference, CURR_ROTOR + CURR_{name} + FEATH + {i}, null;\n\n")
 
             # BODY: translate (0, YCG, ZCG) from FEATH; same orientation (eye)
-            YCG = grid.interp_tip("YCG", x)
+            YCG = y_sign * grid.interp_tip("YCG", x)
             ZCG = grid.interp_tip("ZCG", x)
             f.write(f"reference: CURR_ROTOR + CURR_{name} + BODY + {i}, #gen ref\n")
             f.write(f"    reference, CURR_ROTOR + CURR_{name} + FEATH + {i}, 0., {_f(YCG)}, {_f(ZCG)},\n")
