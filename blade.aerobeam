@@ -1,0 +1,860 @@
+# blade.aerobeam
+# name=XV_15_rotor_SI
+# element 1: x1=0.6096000000 xm=0.6210300000 x2=0.6324600000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 1,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 1,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 1, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 2, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 3, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5078730000,
+         0.0000000000, 0.5065776000,
+         1.0000000000, 0.5052823524,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2539365000,
+         0.0000000000, -0.2532888000,
+         1.0000000000, -0.2526411762,
+    const, 0.,     # Twist
+
+# element 2: x1=0.6324600000 xm=0.6381750000 x2=0.6438900000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 2,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 2,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 3, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 4, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 5, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5052823524,
+         0.0000000000, 0.5046346546,
+         1.0000000000, 0.5039868619,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2526411762,
+         0.0000000000, -0.2523173273,
+         1.0000000000, -0.2519934309,
+    const, 0.,     # Twist
+
+# element 3: x1=0.6438900000 xm=0.6453187500 x2=0.6467475000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 3,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 3,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 5, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 6, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 7, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5039868619,
+         0.0000000000, 0.5038249137,
+         1.0000000000, 0.5036629655,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2519934309,
+         0.0000000000, -0.2519124568,
+         1.0000000000, -0.2518314827,
+    const, 0.,     # Twist
+
+# element 4: x1=0.6467475000 xm=0.6481762500 x2=0.6496050000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 4,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 4,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 7, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 8, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 9, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5036629655,
+         0.0000000000, 0.5035010529,
+         1.0000000000, 0.5033392118,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2518314827,
+         0.0000000000, -0.2517505265,
+         1.0000000000, -0.2516696059,
+    const, 0.,     # Twist
+
+# element 5: x1=0.6496050000 xm=0.6524625000 x2=0.6553200000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 5,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 5,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 9, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 10, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 11, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5033392118,
+         0.0000000000, 0.5030155294,
+         1.0000000000, 0.5026910000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2516696059,
+         0.0000000000, -0.2515077647,
+         1.0000000000, -0.2513455000,
+    const, 0.,     # Twist
+
+# element 6: x1=0.6553200000 xm=0.6667500000 x2=0.6781800000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 6,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 6,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 11, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 12, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 13, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5026910000,
+         0.0000000000, 0.5013962953,
+         1.0000000000, 0.5001010000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2513455000,
+         0.0000000000, -0.2506981476,
+         1.0000000000, -0.2500505000,
+    const, 0.,     # Twist
+
+# element 7: x1=0.6781800000 xm=0.6819900000 x2=0.6858000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 7,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 7,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 13, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 14, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 15, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.5001010000,
+         0.0000000000, 0.4996690000,
+         1.0000000000, 0.4992370000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2500505000,
+         0.0000000000, -0.2498345000,
+         1.0000000000, -0.2496185000,
+    const, 0.,     # Twist
+
+# element 8: x1=0.6858000000 xm=0.7239000000 x2=0.7620000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 8,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 8,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 15, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 16, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 17, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4992370000,
+         0.0000000000, 0.4949187740,
+         1.0000000000, 0.4906010000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2496185000,
+         0.0000000000, -0.2474593870,
+         1.0000000000, -0.2453005000,
+    const, 0.,     # Twist
+
+# element 9: x1=0.7620000000 xm=0.8191500000 x2=0.8763000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 9,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 9,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 17, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 18, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 19, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4906010000,
+         0.0000000000, 0.4841240241,
+         1.0000000000, 0.4776470000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2453005000,
+         0.0000000000, -0.2420620121,
+         1.0000000000, -0.2388235000,
+    const, 0.,     # Twist
+
+# element 10: x1=0.8763000000 xm=0.9144000000 x2=0.9525000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 10,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 10,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 19, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 20, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 21, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4776470000,
+         0.0000000000, 0.4733290000,
+         1.0000000000, 0.4690110000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2388235000,
+         0.0000000000, -0.2366645000,
+         1.0000000000, -0.2345055000,
+    const, 0.,     # Twist
+
+# element 11: x1=0.9525000000 xm=0.9963150000 x2=1.0401300000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 11,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 11,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 21, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 22, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 23, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4690110000,
+         0.0000000000, 0.4640455000,
+         1.0000000000, 0.4590800000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2345055000,
+         0.0000000000, -0.2320227500,
+         1.0000000000, -0.2295400000,
+    const, 0.,     # Twist
+
+# element 12: x1=1.0401300000 xm=1.0915650000 x2=1.1430000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 12,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 12,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 23, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 24, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 25, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4590800000,
+         0.0000000000, 0.4532505000,
+         1.0000000000, 0.4474210000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2295400000,
+         0.0000000000, -0.2266252500,
+         1.0000000000, -0.2237105000,
+    const, 0.,     # Twist
+
+# element 13: x1=1.1430000000 xm=1.1906250000 x2=1.2382500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 13,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 13,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 25, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 26, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 27, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4474210000,
+         0.0000000000, 0.4420235000,
+         1.0000000000, 0.4366260000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2237105000,
+         0.0000000000, -0.2210117500,
+         1.0000000000, -0.2183130000,
+    const, 0.,     # Twist
+
+# element 14: x1=1.2382500000 xm=1.3811250000 x2=1.5240000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 14,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 14,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 27, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 28, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 29, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4366260000,
+         0.0000000000, 0.4204335307,
+         1.0000000000, 0.4042410000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2183130000,
+         0.0000000000, -0.2102167654,
+         1.0000000000, -0.2021205000,
+    const, 0.,     # Twist
+
+# element 15: x1=1.5240000000 xm=1.7297400000 x2=1.9354800000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 15,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 15,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 29, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 30, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 31, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.4042410000,
+         0.0000000000, 0.3809238044,
+         1.0000000000, 0.3576070000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.2021205000,
+         0.0000000000, -0.1904619022,
+         1.0000000000, -0.1788035000,
+    const, 0.,     # Twist
+
+# element 16: x1=1.9354800000 xm=2.0154900000 x2=2.0955000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 16,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 16,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 31, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 32, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 33, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.3576070000,
+         0.0000000000, 0.3485390000,
+         1.0000000000, 0.3394710000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1788035000,
+         0.0000000000, -0.1742695000,
+         1.0000000000, -0.1697355000,
+    const, 0.,     # Twist
+
+# element 17: x1=2.0955000000 xm=2.2002750000 x2=2.3050500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 17,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 17,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 33, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 34, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 35, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.3394710000,
+         0.0000000000, 0.3275965000,
+         1.0000000000, 0.3157220000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1697355000,
+         0.0000000000, -0.1637982500,
+         1.0000000000, -0.1578610000,
+    const, 0.,     # Twist
+
+# element 18: x1=2.3050500000 xm=2.4098250000 x2=2.5146000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 18,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 18,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 35, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 36, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 37, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.3157220000,
+         0.0000000000, 0.3038475000,
+         1.0000000000, 0.2919730000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1578610000,
+         0.0000000000, -0.1519237500,
+         1.0000000000, -0.1459865000,
+    const, 0.,     # Twist
+
+# element 19: x1=2.5146000000 xm=2.5717500000 x2=2.6289000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 19,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 19,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 37, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 38, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 39, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2919730000,
+         0.0000000000, 0.2854960000,
+         1.0000000000, 0.2790190000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1459865000,
+         0.0000000000, -0.1427480000,
+         1.0000000000, -0.1395095000,
+    const, 0.,     # Twist
+
+# element 20: x1=2.6289000000 xm=2.7965400000 x2=2.9641800000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 20,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 20,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 39, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 40, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 41, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2790190000,
+         0.0000000000, 0.2600198333,
+         1.0000000000, 0.2410210000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1395095000,
+         0.0000000000, -0.1300099167,
+         1.0000000000, -0.1205105000,
+    const, 0.,     # Twist
+
+# element 21: x1=2.9641800000 xm=3.0918150000 x2=3.2194500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 21,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 21,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 41, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 42, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 43, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2410210000,
+         0.0000000000, 0.2265550865,
+         1.0000000000, 0.2120900000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1205105000,
+         0.0000000000, -0.1132775432,
+         1.0000000000, -0.1060450000,
+    const, 0.,     # Twist
+
+# element 22: x1=3.2194500000 xm=3.2356425000 x2=3.2518350000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 22,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 22,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 43, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 44, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 45, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2120900000,
+         0.0000000000, 0.2102548500,
+         1.0000000000, 0.2084197000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1060450000,
+         0.0000000000, -0.1051274250,
+         1.0000000000, -0.1042098500,
+    const, 0.,     # Twist
+
+# element 23: x1=3.2518350000 xm=3.2599312500 x2=3.2680275000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 23,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 23,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 45, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 46, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 47, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2084197000,
+         0.0000000000, 0.2075021250,
+         1.0000000000, 0.2065845500,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1042098500,
+         0.0000000000, -0.1037510625,
+         1.0000000000, -0.1032922750,
+    const, 0.,     # Twist
+
+# element 24: x1=3.2680275000 xm=3.2720756250 x2=3.2761237500
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 24,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 24,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 47, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 48, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 49, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2065845500,
+         0.0000000000, 0.2061257625,
+         1.0000000000, 0.2056669750,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1032922750,
+         0.0000000000, -0.1030628813,
+         1.0000000000, -0.1028334875,
+    const, 0.,     # Twist
+
+# element 25: x1=3.2761237500 xm=3.2801718750 x2=3.2842200000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 25,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 25,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 49, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 50, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 51, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2056669750,
+         0.0000000000, 0.2052080000,
+         1.0000000000, 0.2047490000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1028334875,
+         0.0000000000, -0.1026040000,
+         1.0000000000, -0.1023745000,
+    const, 0.,     # Twist
+
+# element 26: x1=3.2842200000 xm=3.3004125000 x2=3.3166050000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 26,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 26,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 51, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 52, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 53, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2047490000,
+         0.0000000000, 0.2029140000,
+         1.0000000000, 0.2010786667,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1023745000,
+         0.0000000000, -0.1014570000,
+         1.0000000000, -0.1005393333,
+    const, 0.,     # Twist
+
+# element 27: x1=3.3166050000 xm=3.3327975000 x2=3.3489900000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 27,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 27,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 53, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 54, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 55, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.2010786667,
+         0.0000000000, 0.1992434762,
+         1.0000000000, 0.1974090000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.1005393333,
+         0.0000000000, -0.0996217381,
+         1.0000000000, -0.0987045000,
+    const, 0.,     # Twist
+
+# element 28: x1=3.3489900000 xm=3.3604200000 x2=3.3718500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 28,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 28,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 55, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 56, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 57, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1974090000,
+         0.0000000000, 0.1961135000,
+         1.0000000000, 0.1948180000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0987045000,
+         0.0000000000, -0.0980567500,
+         1.0000000000, -0.0974090000,
+    const, 0.,     # Twist
+
+# element 29: x1=3.3718500000 xm=3.3909000000 x2=3.4099500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 29,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 29,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 57, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 58, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 59, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1948180000,
+         0.0000000000, 0.1926590337,
+         1.0000000000, 0.1905000000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0974090000,
+         0.0000000000, -0.0963295168,
+         1.0000000000, -0.0952500000,
+    const, 0.,     # Twist
+
+# element 30: x1=3.4099500000 xm=3.4290000000 x2=3.4480500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 30,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 30,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 59, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 60, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 61, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1905000000,
+         0.0000000000, 0.1883410000,
+         1.0000000000, 0.1861823315,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0952500000,
+         0.0000000000, -0.0941705000,
+         1.0000000000, -0.0930911657,
+    const, 0.,     # Twist
+
+# element 31: x1=3.4480500000 xm=3.4861500000 x2=3.5242500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 31,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 31,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 61, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 62, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 63, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1861823315,
+         0.0000000000, 0.1818641818,
+         1.0000000000, 0.1775460000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0930911657,
+         0.0000000000, -0.0909320909,
+         1.0000000000, -0.0887730000,
+    const, 0.,     # Twist
+
+# element 32: x1=3.5242500000 xm=3.5433000000 x2=3.5623500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 32,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 32,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 63, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 64, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 65, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1775460000,
+         0.0000000000, 0.1753867296,
+         1.0000000000, 0.1732280000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0887730000,
+         0.0000000000, -0.0876933648,
+         1.0000000000, -0.0866140000,
+    const, 0.,     # Twist
+
+# element 33: x1=3.5623500000 xm=3.5718750000 x2=3.5814000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 33,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 33,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 65, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 66, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 67, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1732280000,
+         0.0000000000, 0.1721485000,
+         1.0000000000, 0.1710690000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0866140000,
+         0.0000000000, -0.0860742500,
+         1.0000000000, -0.0855345000,
+    const, 0.,     # Twist
+
+# element 34: x1=3.5814000000 xm=3.6004500000 x2=3.6195000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 34,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 34,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 67, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 68, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 69, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1710690000,
+         0.0000000000, 0.1689100000,
+         1.0000000000, 0.1667510000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0855345000,
+         0.0000000000, -0.0844550000,
+         1.0000000000, -0.0833755000,
+    const, 0.,     # Twist
+
+# element 35: x1=3.6195000000 xm=3.6385500000 x2=3.6576000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 35,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 35,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 69, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 70, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 71, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1667510000,
+         0.0000000000, 0.1645918364,
+         1.0000000000, 0.1624330000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0833755000,
+         0.0000000000, -0.0822959182,
+         1.0000000000, -0.0812165000,
+    const, 0.,     # Twist
+
+# element 36: x1=3.6576000000 xm=3.6766500000 x2=3.6957000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 36,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 36,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 71, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 72, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 73, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1624330000,
+         0.0000000000, 0.1602736667,
+         1.0000000000, 0.1581150000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0812165000,
+         0.0000000000, -0.0801368333,
+         1.0000000000, -0.0790575000,
+    const, 0.,     # Twist
+
+# element 37: x1=3.6957000000 xm=3.7052250000 x2=3.7147500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 37,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 37,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 73, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 74, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 75, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1581150000,
+         0.0000000000, 0.1570355000,
+         1.0000000000, 0.1559560000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0790575000,
+         0.0000000000, -0.0785177500,
+         1.0000000000, -0.0779780000,
+    const, 0.,     # Twist
+
+# element 38: x1=3.7147500000 xm=3.7338000000 x2=3.7528500000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 38,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 38,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 75, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 76, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 77, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1559560000,
+         0.0000000000, 0.1537970000,
+         1.0000000000, 0.1516380000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0779780000,
+         0.0000000000, -0.0768985000,
+         1.0000000000, -0.0758190000,
+    const, 0.,     # Twist
+
+# element 39: x1=3.7528500000 xm=3.7814250000 x2=3.8100000000
+aerodynamic beam3:
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 39,   # aero panel name
+    CURR_ROTOR + CURR_XV_15_rotor_SI + 39,   # link to structural beam
+    induced velocity, CURR_ROTOR,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 77, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 78, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    reference, CURR_ROTOR + CURR_XV_15_rotor_SI + AERO + 79, null,
+        1, 0., 1., 0., 3, 1., 0., 0.,
+    piecewise linear, 3,
+        -1.0000000000, 0.1516380000,
+         0.0000000000, 0.1483993362,
+         1.0000000000, 0.1451610000,
+    const, 0.,     # AC
+    piecewise linear, 3,
+        -1.0000000000, -0.0758190000,
+         0.0000000000, -0.0741996681,
+         1.0000000000, -0.0725805000,
+    const, 0.,     # Twist
+
