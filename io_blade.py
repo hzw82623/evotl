@@ -379,8 +379,11 @@ def load_aero(path: Optional[str], units_policy: str = "raw") -> Optional[AeroDa
         warnings.append("AERO header lacks canonical names; trying heuristic column guess.")
         ridx, cidx = _choose_by_heuristics()
         if cidx is None:
-            # as ultimate fallback, assume first two columns
-            ridx, cidx = 0, 1 if ncols > 1 else (0, None)
+            # as ultimate fallback, assume first two columns when available
+            if ncols > 1:
+                ridx, cidx = 0, 1
+            else:
+                ridx, cidx = 0, None
         if cidx is None:
             raise ValueError("AERO: could not infer Radial/Chord columns.")
         Radial = cols[ridx][:]

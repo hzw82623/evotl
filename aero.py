@@ -9,7 +9,8 @@ blade.aerobeam:
 - For each element, define 'aerodynamic beam3:' with 3 references (end-mid-end).
 - Chord defined as piecewise linear over [-1,1] with three points (x1, xm, x2).
 - BC point = -0.5 * Chord.
-- Twist = const, 0.  (FEATH references carry structural pitch; if需传入气动扭转，可后续改为来自 AeroData.Twist)
+- Twist = const, 0.  (FEATH references carry structural pitch; if you need to pass
+  aerodynamic twist, later change this to pull from AeroData.Twist)
 """
 
 import math
