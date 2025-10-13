@@ -1,0 +1,476 @@
+# blade.nod
+# name=blade2
+structural:  CURR_ROTOR + CURR_blade2 + 1, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 1, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 1, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 1, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 1, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 2, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 2, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 2, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 2, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 2, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 3, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 3, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 3, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 3, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 3, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 4, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 4, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 4, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 4, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 4, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 5, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 5, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 5, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 5, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 5, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 6, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 6, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 6, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 6, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 6, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 7, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 7, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 7, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 7, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 7, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 8, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 8, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 8, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 8, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 8, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 9, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 9, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 9, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 9, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 9, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 10, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 10, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 10, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 10, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 10, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 11, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 11, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 11, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 11, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 11, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 12, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 12, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 12, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 12, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 12, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 13, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 13, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 13, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 13, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 13, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 14, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 14, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 14, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 14, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 14, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 15, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 15, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 15, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 15, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 15, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 16, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 16, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 16, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 16, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 16, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 17, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 17, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 17, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 17, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 17, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 18, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 18, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 18, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 18, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 18, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 19, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 19, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 19, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 19, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 19, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 20, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 20, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 20, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 20, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 20, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 21, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 21, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 21, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 21, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 21, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 22, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 22, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 22, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 22, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 22, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 23, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 23, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 23, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 23, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 23, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 24, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 24, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 24, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 24, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 24, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 25, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 25, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 25, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 25, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 25, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 26, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 26, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 26, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 26, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 26, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 27, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 27, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 27, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 27, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 27, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 28, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 28, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 28, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 28, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 28, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 29, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 29, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 29, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 29, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 29, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 30, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 30, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 30, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 30, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 30, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 31, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 31, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 31, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 31, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 31, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 32, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 32, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 32, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 32, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 32, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 33, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 33, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 33, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 33, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 33, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 34, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 34, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 34, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 34, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 34, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 35, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 35, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 35, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 35, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 35, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 36, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 36, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 36, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 36, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 36, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 37, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 37, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 37, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 37, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 37, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 38, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 38, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 38, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 38, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 38, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 39, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 39, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 39, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 39, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 39, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 40, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 40, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 40, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 40, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 40, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 41, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 41, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 41, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 41, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 41, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 42, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 42, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 42, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 42, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 42, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 43, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 43, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 43, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 43, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 43, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 44, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 44, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 44, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 44, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 44, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 45, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 45, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 45, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 45, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 45, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 46, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 46, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 46, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 46, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 46, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 47, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 47, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 47, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 47, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 47, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 48, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 48, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 48, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 48, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 48, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 49, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 49, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 49, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 49, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 49, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 50, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 50, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 50, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 50, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 50, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 51, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 51, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 51, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 51, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 51, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 52, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 52, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 52, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 52, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 52, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 53, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 53, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 53, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 53, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 53, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 54, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 54, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 54, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 54, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 54, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 55, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 55, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 55, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 55, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 55, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 56, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 56, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 56, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 56, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 56, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 57, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 57, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 57, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 57, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 57, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 58, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 58, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 58, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 58, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 58, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 59, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 59, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 59, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 59, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 59, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 60, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 60, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 60, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 60, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 60, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 61, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 61, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 61, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 61, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 61, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 62, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 62, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 62, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 62, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 62, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 63, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 63, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 63, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 63, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 63, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 64, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 64, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 64, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 64, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 64, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 65, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 65, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 65, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 65, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 65, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 66, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 66, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 66, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 66, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 66, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 67, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 67, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 67, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 67, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 67, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 68, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 68, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 68, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 68, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 68, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 69, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 69, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 69, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 69, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 69, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 70, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 70, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 70, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 70, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 70, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 71, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 71, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 71, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 71, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 71, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 72, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 72, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 72, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 72, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 72, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 73, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 73, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 73, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 73, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 73, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 74, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 74, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 74, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 74, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 74, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 75, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 75, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 75, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 75, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 75, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 76, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 76, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 76, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 76, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 76, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 77, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 77, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 77, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 77, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 77, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 78, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 78, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 78, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 78, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 78, null;
+
+structural:  CURR_ROTOR + CURR_blade2 + 79, dynamic,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 79, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 79, eye,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 79, null,
+    reference, CURR_ROTOR + CURR_blade2 + NEUTR + 79, null;
+

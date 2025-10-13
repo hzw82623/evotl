@@ -1,0 +1,61 @@
+# GCS.ref
+reference: ROTOR_1, #gen ref
+    reference, global, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, global, eye,
+    reference, global, null,
+    reference, global, null;
+
+reference: ROTOR_1_blade1_BASE1, #第1片
+    reference, ROTOR_1, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_1, eulr,0,0,0.0000000000*degrad,
+    reference, ROTOR_1, null,
+    reference, ROTOR_1, null;
+
+reference: ROTOR_1_blade1_BASE2, #第2片
+    reference, ROTOR_1, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_1, eulr,0,0,90.0000000000*degrad,
+    reference, ROTOR_1, null,
+    reference, ROTOR_1, null;
+
+reference: ROTOR_1_blade1_BASE3, #第3片
+    reference, ROTOR_1, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_1, eulr,0,0,180.0000000000*degrad,
+    reference, ROTOR_1, null,
+    reference, ROTOR_1, null;
+
+reference: ROTOR_1_blade1_BASE4, #第4片
+    reference, ROTOR_1, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_1, eulr,0,0,270.0000000000*degrad,
+    reference, ROTOR_1, null,
+    reference, ROTOR_1, null;
+
+reference: ROTOR_2, #gen ref
+    reference, global, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, global, eye,
+    reference, global, null,
+    reference, global, null;
+
+reference: ROTOR_2_blade1_BASE1, #第1片
+    reference, ROTOR_2, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_2, eulr,0,0,-0.0000000000*degrad,
+    reference, ROTOR_2, null,
+    reference, ROTOR_2, null;
+
+reference: ROTOR_2_blade1_BASE2, #第2片
+    reference, ROTOR_2, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_2, eulr,0,0,-90.0000000000*degrad,
+    reference, ROTOR_2, null,
+    reference, ROTOR_2, null;
+
+reference: ROTOR_2_blade1_BASE3, #第3片
+    reference, ROTOR_2, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_2, eulr,0,0,-180.0000000000*degrad,
+    reference, ROTOR_2, null,
+    reference, ROTOR_2, null;
+
+reference: ROTOR_2_blade1_BASE4, #第4片
+    reference, ROTOR_2, 0.0000000000, 0.0000000000, 0.0000000000,
+    reference, ROTOR_2, eulr,0,0,-270.0000000000*degrad,
+    reference, ROTOR_2, null,
+    reference, ROTOR_2, null;
+

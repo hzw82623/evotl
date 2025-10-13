@@ -1,0 +1,476 @@
+# blade_aero.ref
+# name=blade1
+reference: CURR_ROTOR + CURR_blade1 + AERO + 1, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 1, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 1, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 2, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 2, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 2, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 3, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 3, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 3, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 4, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 4, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 4, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 5, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 5, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 5, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 6, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 6, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 6, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 7, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 7, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 7, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 8, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 8, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 8, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 9, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 9, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 9, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 10, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 10, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 10, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 11, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 11, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 11, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 12, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 12, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 12, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 13, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 13, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 13, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 14, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 14, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 14, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 15, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 15, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 15, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 16, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 16, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 16, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 17, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 17, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 17, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 18, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 18, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 18, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 19, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 19, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 19, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 20, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 20, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 20, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 21, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 21, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 21, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 22, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 22, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 22, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 23, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 23, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 23, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 24, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 24, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 24, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 25, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 25, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 25, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 26, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 26, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 26, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 27, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 27, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 27, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 28, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 28, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 28, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 29, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 29, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 29, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 30, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 30, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 30, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 31, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 31, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 31, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 32, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 32, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 32, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 33, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 33, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 33, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 34, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 34, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 34, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 35, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 35, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 35, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 36, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 36, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 36, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 37, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 37, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 37, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 38, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 38, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 38, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 39, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 39, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 39, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 40, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 40, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 40, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 41, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 41, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 41, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 42, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 42, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 42, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 43, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 43, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 43, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 44, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 44, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 44, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 45, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 45, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 45, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 46, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 46, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 46, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 47, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 47, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 47, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 48, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 48, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 48, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 49, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 49, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 49, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 50, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 50, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 50, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 51, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 51, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 51, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 52, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 52, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 52, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 53, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 53, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 53, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 54, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 54, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 54, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 55, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 55, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 55, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 56, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 56, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 56, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 57, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 57, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 57, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 58, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 58, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 58, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 59, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 59, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 59, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 60, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 60, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 60, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 61, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 61, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 61, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 62, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 62, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 62, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 63, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 63, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 63, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 64, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 64, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 64, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 65, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 65, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 65, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 66, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 66, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 66, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 67, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 67, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 67, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 68, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 68, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 68, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 69, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 69, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 69, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 70, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 70, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 70, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 71, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 71, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 71, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 72, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 72, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 72, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 73, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 73, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 73, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 74, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 74, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 74, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 75, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 75, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 75, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 76, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 76, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 76, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 77, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 77, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 77, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 78, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 78, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 78, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+
+reference: CURR_ROTOR + CURR_blade1 + AERO + 79, #gen ref
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 79, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade1 + FEATH + 79, eye,
+    reference, CURR_ROTOR + BASE, null,
+    reference, CURR_ROTOR + BASE, null;
+

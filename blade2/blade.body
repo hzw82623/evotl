@@ -1,0 +1,714 @@
+# blade.body
+# name=blade2
+# node 1: x=[0.6096000000, 0.6153150000], dL=0.0057150000
+body: CURR_ROTOR + CURR_blade2 + 1, CURR_ROTOR + CURR_blade2 + 1
+    ,
+    4.197872e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 1, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 1,
+        diag, 0.000000e+00, 1.142564e-06, 1.142564e-06
+;
+
+# node 2: x=[0.6153150000, 0.6267450000], dL=0.0114300000
+body: CURR_ROTOR + CURR_blade2 + 2, CURR_ROTOR + CURR_blade2 + 2
+    ,
+    8.395745e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 2, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 2,
+        diag, 0.000000e+00, 9.140510e-06, 9.140510e-06
+;
+
+# node 3: x=[0.6267450000, 0.6353175000], dL=0.0085725000
+body: CURR_ROTOR + CURR_blade2 + 3, CURR_ROTOR + CURR_blade2 + 3
+    ,
+    6.296808e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 3, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 3,
+        diag, 0.000000e+00, 3.856153e-06, 3.856153e-06
+;
+
+# node 4: x=[0.6353175000, 0.6410325000], dL=0.0057150000
+body: CURR_ROTOR + CURR_blade2 + 4, CURR_ROTOR + CURR_blade2 + 4
+    ,
+    4.197872e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 4, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 4,
+        diag, 0.000000e+00, 1.142564e-06, 1.142564e-06
+;
+
+# node 5: x=[0.6410325000, 0.6446043750], dL=0.0035718750
+body: CURR_ROTOR + CURR_blade2 + 5, CURR_ROTOR + CURR_blade2 + 5
+    ,
+    2.623670e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 5, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 5,
+        diag, 0.000000e+00, 2.789462e-07, 2.789462e-07
+;
+
+# node 6: x=[0.6446043750, 0.6460331250], dL=0.0014287500
+body: CURR_ROTOR + CURR_blade2 + 6, CURR_ROTOR + CURR_blade2 + 6
+    ,
+    1.049468e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 6, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 6,
+        diag, 0.000000e+00, 1.785256e-08, 1.785256e-08
+;
+
+# node 7: x=[0.6460331250, 0.6474618750], dL=0.0014287500
+body: CURR_ROTOR + CURR_blade2 + 7, CURR_ROTOR + CURR_blade2 + 7
+    ,
+    1.049468e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 7, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 7,
+        diag, 0.000000e+00, 1.785256e-08, 1.785256e-08
+;
+
+# node 8: x=[0.6474618750, 0.6488906250], dL=0.0014287500
+body: CURR_ROTOR + CURR_blade2 + 8, CURR_ROTOR + CURR_blade2 + 8
+    ,
+    9.885686e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 8, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 8,
+        diag, 1.627304e-04, 1.594926e-04, 3.271425e-06
+;
+
+# node 9: x=[0.6488906250, 0.6510337500], dL=0.0021431250
+body: CURR_ROTOR + CURR_blade2 + 9, CURR_ROTOR + CURR_blade2 + 9
+    ,
+    1.227075e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 9, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 9,
+        diag, 9.275632e-04, 9.090591e-04, 1.859823e-05
+;
+
+# node 10: x=[0.6510337500, 0.6538912500], dL=0.0028575000
+body: CURR_ROTOR + CURR_blade2 + 10, CURR_ROTOR + CURR_blade2 + 10
+    ,
+    1.124545e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 10, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 10,
+        diag, 2.603686e-03, 2.551690e-03, 5.215026e-05
+;
+
+# node 11: x=[0.6538912500, 0.6610350000], dL=0.0071437500
+body: CURR_ROTOR + CURR_blade2 + 11, CURR_ROTOR + CURR_blade2 + 11
+    ,
+    1.779037e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 11, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 11,
+        diag, 1.121906e-02, 1.099544e-02, 2.251379e-04
+;
+
+# node 12: x=[0.6610350000, 0.6724650000], dL=0.0114300000
+body: CURR_ROTOR + CURR_blade2 + 12, CURR_ROTOR + CURR_blade2 + 12
+    ,
+    2.568372e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 12, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 12,
+        diag, 2.806005e-02, 2.750169e-02, 5.639981e-04
+;
+
+# node 13: x=[0.6724650000, 0.6800850000], dL=0.0076200000
+body: CURR_ROTOR + CURR_blade2 + 13, CURR_ROTOR + CURR_blade2 + 13
+    ,
+    1.926911e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 13, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 13,
+        diag, 2.503805e-02, 2.453827e-02, 5.016944e-04
+;
+
+# node 14: x=[0.6800850000, 0.6838950000], dL=0.0038100000
+body: CURR_ROTOR + CURR_blade2 + 14, CURR_ROTOR + CURR_blade2 + 14
+    ,
+    1.012963e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 14, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 14,
+        diag, 1.441841e-02, 1.413020e-02, 2.884915e-04
+;
+
+# node 15: x=[0.6838950000, 0.7048500000], dL=0.0209550000
+body: CURR_ROTOR + CURR_blade2 + 15, CURR_ROTOR + CURR_blade2 + 15
+    ,
+    5.684321e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 15, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 15,
+        diag, 7.393302e-02, 7.247565e-02, 1.499471e-03
+;
+
+# node 16: x=[0.7048500000, 0.7429500000], dL=0.0381000000
+body: CURR_ROTOR + CURR_blade2 + 16, CURR_ROTOR + CURR_blade2 + 16
+    ,
+    1.053972e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 16, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 16,
+        diag, 7.981759e-02, 7.835107e-02, 1.723896e-03
+;
+
+# node 17: x=[0.7429500000, 0.7905750000], dL=0.0476250000
+body: CURR_ROTOR + CURR_blade2 + 17, CURR_ROTOR + CURR_blade2 + 17
+    ,
+    1.311194e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 17, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 17,
+        diag, 2.769904e-02, 2.739915e-02, 8.019395e-04
+;
+
+# node 18: x=[0.7905750000, 0.8477250000], dL=0.0571500000
+body: CURR_ROTOR + CURR_blade2 + 18, CURR_ROTOR + CURR_blade2 + 18
+    ,
+    1.489618e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 18, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 18,
+        diag, 4.862963e-03, 5.185028e-03, 5.029822e-04
+;
+
+# node 19: x=[0.8477250000, 0.8953500000], dL=0.0476250000
+body: CURR_ROTOR + CURR_blade2 + 19, CURR_ROTOR + CURR_blade2 + 19
+    ,
+    1.170440e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 19, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 19,
+        diag, 4.714973e-03, 4.865973e-03, 3.160175e-04
+;
+
+# node 20: x=[0.8953500000, 0.9334500000], dL=0.0381000000
+body: CURR_ROTOR + CURR_blade2 + 20, CURR_ROTOR + CURR_blade2 + 20
+    ,
+    9.287833e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 20, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 20,
+        diag, 4.455411e-03, 4.517829e-03, 2.022603e-04
+;
+
+# node 21: x=[0.9334500000, 0.9744075000], dL=0.0409575000
+body: CURR_ROTOR + CURR_blade2 + 21, CURR_ROTOR + CURR_blade2 + 21
+    ,
+    1.012157e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 21, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 21,
+        diag, 5.505312e-03, 5.612759e-03, 2.531511e-04
+;
+
+# node 22: x=[0.9744075000, 1.0182225000], dL=0.0438150000
+body: CURR_ROTOR + CURR_blade2 + 22, CURR_ROTOR + CURR_blade2 + 22
+    ,
+    1.087664e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 22, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 22,
+        diag, 6.438110e-03, 6.616463e-03, 3.054826e-04
+;
+
+# node 23: x=[1.0182225000, 1.0658475000], dL=0.0476250000
+body: CURR_ROTOR + CURR_blade2 + 23, CURR_ROTOR + CURR_blade2 + 23
+    ,
+    1.182243e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 23, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 23,
+        diag, 7.522410e-03, 7.817299e-03, 3.784341e-04
+;
+
+# node 24: x=[1.0658475000, 1.1172825000], dL=0.0514350000
+body: CURR_ROTOR + CURR_blade2 + 24, CURR_ROTOR + CURR_blade2 + 24
+    ,
+    1.276822e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 24, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 24,
+        diag, 8.789910e-03, 9.245744e-03, 4.644363e-04
+;
+
+# node 25: x=[1.1172825000, 1.1668125000], dL=0.0495300000
+body: CURR_ROTOR + CURR_blade2 + 25, CURR_ROTOR + CURR_blade2 + 25
+    ,
+    1.158325e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 25, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 25,
+        diag, 8.682099e-03, 9.152701e-03, 4.187594e-04
+;
+
+# node 26: x=[1.1668125000, 1.2144375000], dL=0.0476250000
+body: CURR_ROTOR + CURR_blade2 + 26, CURR_ROTOR + CURR_blade2 + 26
+    ,
+    9.083678e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 26, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 26,
+        diag, 7.651547e-03, 8.034907e-03, 3.321659e-04
+;
+
+# node 27: x=[1.2144375000, 1.3096875000], dL=0.0952500000
+body: CURR_ROTOR + CURR_blade2 + 27, CURR_ROTOR + CURR_blade2 + 27
+    ,
+    1.390827e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 27, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 27,
+        diag, 1.355279e-02, 1.498837e-02, 1.335956e-03
+;
+
+# node 28: x=[1.3096875000, 1.4525625000], dL=0.1428750000
+body: CURR_ROTOR + CURR_blade2 + 28, CURR_ROTOR + CURR_blade2 + 28
+    ,
+    1.812905e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 28, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 28,
+        diag, 1.935057e-02, 2.314215e-02, 3.493293e-03
+;
+
+# node 29: x=[1.4525625000, 1.6268700000], dL=0.1743075000
+body: CURR_ROTOR + CURR_blade2 + 29, CURR_ROTOR + CURR_blade2 + 29
+    ,
+    2.084114e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 29, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 29,
+        diag, 2.320767e-02, 2.964810e-02, 5.774195e-03
+;
+
+# node 30: x=[1.6268700000, 1.8326100000], dL=0.2057400000
+body: CURR_ROTOR + CURR_blade2 + 30, CURR_ROTOR + CURR_blade2 + 30
+    ,
+    2.268856e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 30, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 30,
+        diag, 2.642314e-02, 3.620986e-02, 8.578836e-03
+;
+
+# node 31: x=[1.8326100000, 1.9754850000], dL=0.1428750000
+body: CURR_ROTOR + CURR_blade2 + 31, CURR_ROTOR + CURR_blade2 + 31
+    ,
+    1.459162e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 31, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 31,
+        diag, 1.770954e-02, 2.156177e-02, 2.871568e-03
+;
+
+# node 32: x=[1.9754850000, 2.0554950000], dL=0.0800100000
+body: CURR_ROTOR + CURR_blade2 + 32, CURR_ROTOR + CURR_blade2 + 32
+    ,
+    7.858707e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 32, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 32,
+        diag, 9.789848e-03, 1.085660e-02, 6.322433e-04
+;
+
+# node 33: x=[2.0554950000, 2.1478875000], dL=0.0923925000
+body: CURR_ROTOR + CURR_blade2 + 33, CURR_ROTOR + CURR_blade2 + 33
+    ,
+    8.905804e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 33, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 33,
+        diag, 1.133906e-02, 1.254483e-02, 8.766151e-04
+;
+
+# node 34: x=[2.1478875000, 2.2526625000], dL=0.1047750000
+body: CURR_ROTOR + CURR_blade2 + 34, CURR_ROTOR + CURR_blade2 + 34
+    ,
+    9.898210e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 34, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 34,
+        diag, 1.300642e-02, 1.453055e-02, 1.183567e-03
+;
+
+# node 35: x=[2.2526625000, 2.3574375000], dL=0.1047750000
+body: CURR_ROTOR + CURR_blade2 + 35, CURR_ROTOR + CURR_blade2 + 35
+    ,
+    9.704072e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 35, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 35,
+        diag, 1.310728e-02, 1.467239e-02, 1.169064e-03
+;
+
+# node 36: x=[2.3574375000, 2.4622125000], dL=0.1047750000
+body: CURR_ROTOR + CURR_blade2 + 36, CURR_ROTOR + CURR_blade2 + 36
+    ,
+    9.527086e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 36, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 36,
+        diag, 1.305952e-02, 1.467408e-02, 1.153238e-03
+;
+
+# node 37: x=[2.4622125000, 2.5431750000], dL=0.0809625000
+body: CURR_ROTOR + CURR_blade2 + 37, CURR_ROTOR + CURR_blade2 + 37
+    ,
+    7.143180e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 37, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 37,
+        diag, 1.002917e-02, 1.102766e-02, 6.072830e-04
+;
+
+# node 38: x=[2.5431750000, 2.6003250000], dL=0.0571500000
+body: CURR_ROTOR + CURR_blade2 + 38, CURR_ROTOR + CURR_blade2 + 38
+    ,
+    4.766323e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 38, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 38,
+        diag, 7.051208e-03, 7.608657e-03, 2.823595e-04
+;
+
+# node 39: x=[2.6003250000, 2.7127200000], dL=0.1123950000
+body: CURR_ROTOR + CURR_blade2 + 39, CURR_ROTOR + CURR_blade2 + 39
+    ,
+    8.641279e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 39, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 39,
+        diag, 1.273617e-02, 1.453299e-02, 1.187711e-03
+;
+
+# node 40: x=[2.7127200000, 2.8803600000], dL=0.1676400000
+body: CURR_ROTOR + CURR_blade2 + 40, CURR_ROTOR + CURR_blade2 + 40
+    ,
+    1.158646e+00,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 40, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 40,
+        diag, 1.405391e-02, 1.838152e-02, 3.033226e-03
+;
+
+# node 41: x=[2.8803600000, 3.0279975000], dL=0.1476375000
+body: CURR_ROTOR + CURR_blade2 + 41, CURR_ROTOR + CURR_blade2 + 41
+    ,
+    9.274602e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 41, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 41,
+        diag, 7.637842e-03, 1.107623e-02, 1.876306e-03
+;
+
+# node 42: x=[3.0279975000, 3.1556325000], dL=0.1276350000
+body: CURR_ROTOR + CURR_blade2 + 42, CURR_ROTOR + CURR_blade2 + 42
+    ,
+    7.750220e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 42, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 42,
+        diag, 4.316095e-03, 7.133521e-03, 1.176247e-03
+;
+
+# node 43: x=[3.1556325000, 3.2275462500], dL=0.0719137500
+body: CURR_ROTOR + CURR_blade2 + 43, CURR_ROTOR + CURR_blade2 + 43
+    ,
+    4.366728e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 43, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 43,
+        diag, 1.822830e-03, 3.107297e-03, 2.477646e-04
+;
+
+# node 44: x=[3.2275462500, 3.2437387500], dL=0.0161925000
+body: CURR_ROTOR + CURR_blade2 + 44, CURR_ROTOR + CURR_blade2 + 44
+    ,
+    9.832368e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 44, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 44,
+        diag, 3.496841e-04, 6.089518e-04, 1.453209e-05
+;
+
+# node 45: x=[3.2437387500, 3.2558831250], dL=0.0121443750
+body: CURR_ROTOR + CURR_blade2 + 45, CURR_ROTOR + CURR_blade2 + 45
+    ,
+    7.374276e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 45, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 45,
+        diag, 2.474522e-04, 4.438029e-04, 9.945039e-06
+;
+
+# node 46: x=[3.2558831250, 3.2639793750], dL=0.0080962500
+body: CURR_ROTOR + CURR_blade2 + 46, CURR_ROTOR + CURR_blade2 + 46
+    ,
+    4.916184e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 46, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 46,
+        diag, 1.579154e-04, 2.897205e-04, 6.175726e-06
+;
+
+# node 47: x=[3.2639793750, 3.2700515625], dL=0.0060721875
+body: CURR_ROTOR + CURR_blade2 + 47, CURR_ROTOR + CURR_blade2 + 47
+    ,
+    3.687138e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 47, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 47,
+        diag, 1.147338e-04, 2.141507e-04, 4.481403e-06
+;
+
+# node 48: x=[3.2700515625, 3.2740996875], dL=0.0040481250
+body: CURR_ROTOR + CURR_blade2 + 48, CURR_ROTOR + CURR_blade2 + 48
+    ,
+    2.458092e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 48, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 48,
+        diag, 7.472601e-05, 1.412721e-04, 2.915987e-06
+;
+
+# node 49: x=[3.2740996875, 3.2781478125], dL=0.0040481250
+body: CURR_ROTOR + CURR_blade2 + 49, CURR_ROTOR + CURR_blade2 + 49
+    ,
+    2.510514e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 49, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 49,
+        diag, 7.234143e-05, 1.406175e-04, 2.903329e-06
+;
+
+# node 50: x=[3.2781478125, 3.2821959375], dL=0.0040481250
+body: CURR_ROTOR + CURR_blade2 + 50, CURR_ROTOR + CURR_blade2 + 50
+    ,
+    2.700041e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 50, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 50,
+        diag, 6.740944e-05, 1.412914e-04, 2.919617e-06
+;
+
+# node 51: x=[3.2821959375, 3.2923162500], dL=0.0101203125
+body: CURR_ROTOR + CURR_blade2 + 51, CURR_ROTOR + CURR_blade2 + 51
+    ,
+    7.949677e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 51, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 51,
+        diag, 1.395106e-04, 3.600940e-04, 8.013519e-06
+;
+
+# node 52: x=[3.2923162500, 3.3085087500], dL=0.0161925000
+body: CURR_ROTOR + CURR_blade2 + 52, CURR_ROTOR + CURR_blade2 + 52
+    ,
+    1.628398e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 52, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 52,
+        diag, 2.210262e-04, 5.968540e-04, 1.566609e-05
+;
+
+# node 53: x=[3.3085087500, 3.3247012500], dL=0.0161925000
+body: CURR_ROTOR + CURR_blade2 + 53, CURR_ROTOR + CURR_blade2 + 53
+    ,
+    2.067118e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 53, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 53,
+        diag, 2.166836e-04, 6.201406e-04, 1.708036e-05
+;
+
+# node 54: x=[3.3247012500, 3.3408937500], dL=0.0161925000
+body: CURR_ROTOR + CURR_blade2 + 54, CURR_ROTOR + CURR_blade2 + 54
+    ,
+    2.505840e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 54, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 54,
+        diag, 1.455601e-04, 6.434238e-04, 1.849456e-05
+;
+
+# node 55: x=[3.3408937500, 3.3547050000], dL=0.0138112500
+body: CURR_ROTOR + CURR_blade2 + 55, CURR_ROTOR + CURR_blade2 + 55
+    ,
+    2.449938e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 55, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 55,
+        diag, 6.991460e-05, 5.612923e-04, 1.526986e-05
+;
+
+# node 56: x=[3.3547050000, 3.3661350000], dL=0.0114300000
+body: CURR_ROTOR + CURR_blade2 + 56, CURR_ROTOR + CURR_blade2 + 56
+    ,
+    2.137236e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 56, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 56,
+        diag, 2.698724e-05, 4.590285e-04, 1.164727e-05
+;
+
+# node 57: x=[3.3661350000, 3.3813750000], dL=0.0152400000
+body: CURR_ROTOR + CURR_blade2 + 57, CURR_ROTOR + CURR_blade2 + 57
+    ,
+    2.851095e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 57, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 57,
+        diag, 2.787331e-06, 5.883864e-04, 1.741351e-05
+;
+
+# node 58: x=[3.3813750000, 3.4004250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 58, CURR_ROTOR + CURR_blade2 + 58
+    ,
+    3.546056e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 58, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 58,
+        diag, 0.000000e+00, 6.948392e-04, 2.468547e-05
+;
+
+# node 59: x=[3.4004250000, 3.4194750000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 59, CURR_ROTOR + CURR_blade2 + 59
+    ,
+    3.526306e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 59, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 59,
+        diag, 0.000000e+00, 6.453684e-04, 2.361736e-05
+;
+
+# node 60: x=[3.4194750000, 3.4385250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 60, CURR_ROTOR + CURR_blade2 + 60
+    ,
+    3.334479e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 60, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 60,
+        diag, 0.000000e+00, 6.093700e-04, 2.231441e-05
+;
+
+# node 61: x=[3.4385250000, 3.4671000000], dL=0.0285750000
+body: CURR_ROTOR + CURR_blade2 + 61, CURR_ROTOR + CURR_blade2 + 61
+    ,
+    3.971993e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 61, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 61,
+        diag, 3.126640e-05, 9.168939e-04, 4.518766e-05
+;
+
+# node 62: x=[3.4671000000, 3.5052000000], dL=0.0381000000
+body: CURR_ROTOR + CURR_blade2 + 62, CURR_ROTOR + CURR_blade2 + 62
+    ,
+    2.960008e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 62, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 62,
+        diag, 5.724451e-04, 1.246969e-03, 6.052409e-05
+;
+
+# node 63: x=[3.5052000000, 3.5337750000], dL=0.0285750000
+body: CURR_ROTOR + CURR_blade2 + 63, CURR_ROTOR + CURR_blade2 + 63
+    ,
+    1.224793e-01,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 63, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 63,
+        diag, 6.514035e-04, 9.190416e-04, 2.691988e-05
+;
+
+# node 64: x=[3.5337750000, 3.5528250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 64, CURR_ROTOR + CURR_blade2 + 64
+    ,
+    8.165289e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 64, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 64,
+        diag, 4.194716e-04, 5.983090e-04, 1.462933e-05
+;
+
+# node 65: x=[3.5528250000, 3.5671125000], dL=0.0142875000
+body: CURR_ROTOR + CURR_blade2 + 65, CURR_ROTOR + CURR_blade2 + 65
+    ,
+    6.123967e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 65, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 65,
+        diag, 3.064214e-04, 4.410703e-04, 1.002193e-05
+;
+
+# node 66: x=[3.5671125000, 3.5766375000], dL=0.0095250000
+body: CURR_ROTOR + CURR_blade2 + 66, CURR_ROTOR + CURR_blade2 + 66
+    ,
+    4.082644e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 66, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 66,
+        diag, 2.010764e-04, 2.903393e-04, 6.227660e-06
+;
+
+# node 67: x=[3.5766375000, 3.5909250000], dL=0.0142875000
+body: CURR_ROTOR + CURR_blade2 + 67, CURR_ROTOR + CURR_blade2 + 67
+    ,
+    6.123967e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 67, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 67,
+        diag, 2.964575e-04, 4.311051e-04, 9.818554e-06
+;
+
+# node 68: x=[3.5909250000, 3.6099750000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 68, CURR_ROTOR + CURR_blade2 + 68
+    ,
+    8.165289e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 68, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 68,
+        diag, 3.829649e-04, 5.667523e-04, 1.398532e-05
+;
+
+# node 69: x=[3.6099750000, 3.6290250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 69, CURR_ROTOR + CURR_blade2 + 69
+    ,
+    8.037706e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 69, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 69,
+        diag, 3.612333e-04, 5.461604e-04, 1.352728e-05
+;
+
+# node 70: x=[3.6290250000, 3.6480750000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 70, CURR_ROTOR + CURR_blade2 + 70
+    ,
+    7.654958e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 70, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 70,
+        diag, 3.260973e-04, 5.051455e-04, 1.257685e-05
+;
+
+# node 71: x=[3.6480750000, 3.6671250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 71, CURR_ROTOR + CURR_blade2 + 71
+    ,
+    7.144628e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 71, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 71,
+        diag, 2.835421e-04, 4.530888e-04, 1.136328e-05
+;
+
+# node 72: x=[3.6671250000, 3.6861750000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 72, CURR_ROTOR + CURR_blade2 + 72
+    ,
+    6.634297e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 72, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 72,
+        diag, 2.395527e-04, 3.993712e-04, 1.011582e-05
+;
+
+# node 73: x=[3.6861750000, 3.7004625000], dL=0.0142875000
+body: CURR_ROTOR + CURR_blade2 + 73, CURR_ROTOR + CURR_blade2 + 73
+    ,
+    4.640776e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 73, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 73,
+        diag, 1.521730e-04, 2.649467e-04, 6.180410e-06
+;
+
+# node 74: x=[3.7004625000, 3.7099875000], dL=0.0095250000
+body: CURR_ROTOR + CURR_blade2 + 74, CURR_ROTOR + CURR_blade2 + 74
+    ,
+    2.934287e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 74, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 74,
+        diag, 9.117191e-05, 1.629878e-04, 3.543600e-06
+;
+
+# node 75: x=[3.7099875000, 3.7242750000], dL=0.0142875000
+body: CURR_ROTOR + CURR_blade2 + 75, CURR_ROTOR + CURR_blade2 + 75
+    ,
+    4.178075e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 75, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 75,
+        diag, 1.137213e-04, 2.178444e-04, 5.142035e-06
+;
+
+# node 76: x=[3.7242750000, 3.7433250000], dL=0.0190500000
+body: CURR_ROTOR + CURR_blade2 + 76, CURR_ROTOR + CURR_blade2 + 76
+    ,
+    5.188133e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 76, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 76,
+        diag, 8.448717e-05, 2.178982e-04, 5.983871e-06
+;
+
+# node 77: x=[3.7433250000, 3.7671375000], dL=0.0238125000
+body: CURR_ROTOR + CURR_blade2 + 77, CURR_ROTOR + CURR_blade2 + 77
+    ,
+    5.874046e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 77, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 77,
+        diag, 1.598572e-05, 1.727560e-04, 6.244646e-06
+;
+
+# node 78: x=[3.7671375000, 3.7957125000], dL=0.0285750000
+body: CURR_ROTOR + CURR_blade2 + 78, CURR_ROTOR + CURR_blade2 + 78
+    ,
+    6.123967e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 78, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 78,
+        diag, 0.000000e+00, 1.218817e-04, 6.569345e-06
+;
+
+# node 79: x=[3.7957125000, 3.8100000000], dL=0.0142875000
+body: CURR_ROTOR + CURR_blade2 + 79, CURR_ROTOR + CURR_blade2 + 79
+    ,
+    2.679235e-02,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 79, 0., 0., 0.,
+    reference, CURR_ROTOR + CURR_blade2 + BODY + 79,
+        diag, 0.000000e+00, 3.338784e-05, 1.127849e-06
+;
+
+# total_mass = 4.052211e+01

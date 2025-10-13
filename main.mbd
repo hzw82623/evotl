@@ -1,0 +1,105 @@
+begin: data;
+    problem: initial value;
+end: data;
+
+begin: initial value;
+    time step: 1.000000e-03;
+    initial time: 0.000000;
+    final time: 10.000000 ;
+    max iterations: 100;
+    tolerance: 1.000000e-01;
+    derivatives tolerance: 1.000000e+38;
+    derivatives max iterations: 30;
+    derivatives coefficient: 1.000000e+00;
+    linear solver: naive, colamd, pivot factor, 1.e0;
+    method: ms, 0.2;
+    #output: residual;
+    output: counter;
+    /*
+    eigenanalysis: 0.10000,
+        output matrices,
+        output eigenvectors,
+        output geometry,
+        upper frequency limit, 400,
+        lower frequency limit, 1,
+        use lapack;*/
+end: initial value;
+
+# CONTROL DATA SECTION
+begin: control data;
+set: const integer num_blade        = 158;      # blade structural nodes (auto)
+set: const integer num_blade_dynamic= 158;     # blade bodies (auto)
+set: const integer num_beam         = 78;             # blade beams (auto)
+set: const integer num_aerobeam     = 0;         # blade aerodynamic beams (auto)
+set: const integer num_rotor        = 0;   # rotor static nodes (TBD)
+set: const integer num_rotor_dynamic= 0; # yoke/motor bodies (TBD)
+set: const integer num_force        = 0;            # external forces (TBD)
+set: const integer num_joint_rotor  = 0;     # rotor joints (TBD)
+set: const integer num_joint_by     = 0;# blade-yoke joints (TBD)
+
+    structural nodes:
+        num_blade +              # Blade nodes
+        num_rotor                # Rotor static nodes
+        ;
+    rigid bodies:
+        num_blade_dynamic +      # Blade bodies
+        num_rotor_dynamic        # Yoke/Motor bodies
+        ;
+    aerodynamic elements:
+        num_aerobeam             # Blade aerodynamic beams
+        ;
+    forces: num_force;
+
+    beams:
+        num_beam +               # Blade Beams
+        ;
+    joints:
+        num_blade +              # Connection Blade-Yoke (TBD)
+        num_rotor                # Rotor joint (TBD)
+        ;
+    inertia: 1;
+    air properties;
+    gravity;
+    induced velocity elements:+1
+    ;
+    output results: netcdf;
+    default output: reference frames;
+    default orientation: orientation vector;
+    print: equation description;
+end: control data;
+
+c81 data: VR73, "../Profile/VR73.c81";
+
+set: const real THETA_COLL =  5.0; # input collective angle in deg
+set: const real COLLECTIVE_VERTICAL = 0.000000244350555*THETA_COLL^3 + 0.000061328077169*THETA_COLL^2 - 0.004217073403049*THETA_COLL + 0.000000119676574;
+
+#defining nodes data
+# Reference frame 
+include: "GCS.ref";
+
+# Blades
+include: "blade1/blade.ref";
+include: "blade2/blade.ref";
+
+begin: nodes;
+
+    include: "blade1/blade.nod";
+    include: "blade2/blade.nod";
+
+end: nodes;
+
+begin: elements;
+
+    # --- blade1 ---
+    include: "blade1/blade.beam";
+    include: "blade1/blade.body";
+
+    # --- blade2 ---
+    include: "blade2/blade.beam";
+    include: "blade2/blade.body";
+
+    air properties: 1.225, 340.0,
+        -1., 0., 0., const,0;
+        #cosine, 15., pi/10, WIND_SPEED/2, half, 0.;
+
+end: elements;
