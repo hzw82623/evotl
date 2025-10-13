@@ -29,6 +29,7 @@ class VehicleCfg:
 def _fix_malformed_tags(xml_text: str) -> str:
     """Fix known malformed tags in the provided XML text."""
     return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\1</形状系数>", xml_text)
+    return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\\1</形状系数>", xml_text)
 
 
 def _get_text(elem: Optional[ET.Element]) -> str:
@@ -55,6 +56,7 @@ def parse_rotors_xml(xml_path: str) -> List[RotorCfg]:
         raise ValueError(
             f"Failed to parse rotors XML '{xml_path}'. Ensure the file is a valid XML document."
         ) from exc
+    root = ET.fromstring(xml_text)
     rotors: List[RotorCfg] = []
 
     for idx, rotor_node in enumerate(list(root), start=1):

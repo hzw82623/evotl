@@ -208,6 +208,8 @@ def main(argv: Optional[List[str]] = None) -> int:
             return 1
 
         rotor_outputs: List[RotorOut] = []
+        rotors = parse_rotors_xml(args.rotors_xml)
+        write_gcs_refs(rotors, os.path.join(args.out, "GCS.ref"))
 
         for rotor in rotors:
             if not rotor.shape_tip_path:
