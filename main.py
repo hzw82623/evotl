@@ -36,6 +36,7 @@ try:
     from .bodies import write_bodies_file
     from .aero import write_aero_refs_file, write_aero_beam_file
     from .rotors_xml import RotorCfg, parse_rotors_xml, parse_vehicle_xml
+    from .mbd_writer import write_main_mbd, RotorOut, SimParams
     from .gcs import write_gcs_refs
 except Exception:
     # script-style (python main.py)
@@ -51,6 +52,7 @@ except Exception:
     from bodies import write_bodies_file  # type: ignore
     from aero import write_aero_refs_file, write_aero_beam_file  # type: ignore
     from rotors_xml import RotorCfg, parse_rotors_xml, parse_vehicle_xml  # type: ignore
+    from mbd_writer import write_main_mbd, RotorOut, SimParams  # type: ignore
     from gcs import write_gcs_refs  # type: ignore
 
 
@@ -204,7 +206,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Error loading rotors XML: {exc}")
             return 1
-        write_gcs_refs(rotors, os.path.join(args.out, "GCS.ref"))
+
+        rotor_outputs: List[RotorOut] = []
 
         for rotor in rotors:
             if not rotor.shape_tip_path:
@@ -247,6 +250,22 @@ def main(argv: Optional[List[str]] = None) -> int:
                 y_sign=y_sign,
                 extra_report_lines=extra_lines,
             )
+
+            has_aero = os.path.isfile(os.path.join(rotor_out, "blade.aerobeam"))
+            rotor_outputs.append(
+                RotorOut(index=rotor.index, name=rotor_name, out_dir=rotor_out, has_aero=has_aero)
+            )
+
+        write_gcs_refs(rotors, os.path.join(args.out, "GCS.ref"))
+        write_main_mbd(
+            project_out_dir=args.out,
+            rotor_outputs=rotor_outputs,
+            sim=SimParams(),
+            ctrl_override=None,
+            c81_pairs=[("VR73", "../Profile/VR73.c81")],
+            extra_includes_before_nodes=None,
+            extra_elements_lines=None,
+        )
 
         print(f"Done multi-rotor. Outputs in: {args.out}")
         return 0
