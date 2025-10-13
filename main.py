@@ -204,6 +204,7 @@ def main(argv: Optional[List[str]] = None) -> int:
         except (FileNotFoundError, ValueError) as exc:
             print(f"Error loading rotors XML: {exc}")
             return 1
+        rotors = parse_rotors_xml(args.rotors_xml)
         write_gcs_refs(rotors, os.path.join(args.out, "GCS.ref"))
 
         for rotor in rotors:
