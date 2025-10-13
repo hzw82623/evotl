@@ -28,7 +28,7 @@ class VehicleCfg:
 
 def _fix_malformed_tags(xml_text: str) -> str:
     """Fix known malformed tags in the provided XML text."""
-    return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\\1</形状系数>", xml_text)
+    return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\1</形状系数>", xml_text)
 
 
 def _get_text(elem: Optional[ET.Element]) -> str:
