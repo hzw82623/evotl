@@ -19,10 +19,6 @@ from rotors_xml import (
     build_aerodata_from_rotor_xml,
     parse_rotors_xml,
 )
-from io_blade import AeroData, TipData, load_aero, load_tip
-from mbd_writer import RotorOut, SimParams, write_main_mbd
-from refs_nodes import write_nodes, write_refs
-from rotors_xml import RotorCfg, parse_rotors_xml
 from select_sections import (
     SectionReport,
     SectionSelectionConfig,
@@ -107,7 +103,6 @@ def _run_single_blade(
 ) -> None:
     tip: TipData = load_tip(tip_path, units_policy=cfg.units_tip)
     aero = aero_data
-    aero: Optional[AeroData] = load_aero(aero_path, units_policy=cfg.units_aero) if aero_path else None
 
     sel_cfg = SectionSelectionConfig(
         r_start=cfg.r_start,
