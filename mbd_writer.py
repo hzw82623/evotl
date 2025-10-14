@@ -255,6 +255,7 @@ def write_main_mbd(
         path_aero = os.path.join(rotor.out_dir, "blade.aerobeam")
         rel_aero = _path_rel(project_out_dir, path_aero)
         has_aero = include_aero and _safe_exists(path_aero)
+        has_aero = _safe_exists(path_aero)
         lines.append(f"    # --- {rotor.name} ---")
         for blade_idx in range(1, max(1, rotor.blade_count) + 1):
             blade_base = blade_idx * 10000
