@@ -28,8 +28,48 @@ class VehicleCfg:
 
 def _fix_malformed_tags(xml_text: str) -> str:
     """Fix known malformed tags in the provided XML text."""
+
     return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\1</形状系数>", xml_text)
-    return re.sub(r"<形状系数>([^<]+)<形状系数>", r"<形状系数>\\1</形状系数>", xml_text)
+
+
+def _looks_windows_absolute(path: str) -> bool:
+    """Return ``True`` if *path* looks like a Windows absolute path."""
+
+    if not path:
+        return False
+    if path.startswith("\\\\") or path.startswith("//"):
+        return True
+    return bool(re.match(r"^[A-Za-z]:[\\/].*", path))
+
+
+def _resolve_tip_path(xml_path: str, raw_path: Optional[str]) -> Optional[str]:
+    """Resolve a tip path, handling relative paths and Windows absolutes."""
+
+    if not raw_path:
+        return None
+
+    xml_dir = os.path.dirname(os.path.abspath(xml_path))
+    candidate = raw_path.strip()
+    candidate = candidate.replace("\\", os.sep)
+
+    looks_abs = os.path.isabs(candidate) or _looks_windows_absolute(raw_path)
+    if looks_abs and os.path.isfile(candidate):
+        return os.path.abspath(candidate)
+
+    if not looks_abs:
+        rel_candidate = os.path.abspath(os.path.join(xml_dir, candidate))
+        if os.path.isfile(rel_candidate):
+            return rel_candidate
+
+    base_name = os.path.basename(candidate)
+    fallback = os.path.abspath(os.path.join(xml_dir, base_name))
+    if os.path.isfile(fallback):
+        return fallback
+
+    if looks_abs:
+        return os.path.normpath(candidate)
+
+    return os.path.abspath(candidate)
 
 
 def _get_text(elem: Optional[ET.Element]) -> str:
@@ -56,7 +96,6 @@ def parse_rotors_xml(xml_path: str) -> List[RotorCfg]:
         raise ValueError(
             f"Failed to parse rotors XML '{xml_path}'. Ensure the file is a valid XML document."
         ) from exc
-    root = ET.fromstring(xml_text)
     rotors: List[RotorCfg] = []
 
     for idx, rotor_node in enumerate(list(root), start=1):
@@ -79,13 +118,12 @@ def parse_rotors_xml(xml_path: str) -> List[RotorCfg]:
             or "逆时针"
         )
 
-        shape_path = (
+        shape_path_raw = (
             _get_text(rotor_node.find("桨叶剖面/结构剖面/形状系数"))
             or _get_text(rotor_node.find("形状系数"))
             or None
         )
-        if shape_path and not os.path.isabs(shape_path):
-            shape_path = os.path.abspath(os.path.join(os.path.dirname(xml_path), shape_path))
+        shape_path = _resolve_tip_path(xml_path, shape_path_raw)
 
         rotors.append(
             RotorCfg(

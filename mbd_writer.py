@@ -1,8 +1,8 @@
 """Helpers to assemble the project-level main.mbd input file."""
 
-from dataclasses import dataclass
-from typing import List, Dict, Optional, Tuple
 import os
+from dataclasses import dataclass
+from typing import Dict, List, Optional, Tuple
 
 
 def _fe(x: float) -> str:
@@ -23,12 +23,12 @@ def _safe_exists(path: str) -> bool:
 def _count_token_lines(path: str, token: str) -> int:
     if not _safe_exists(path):
         return 0
-    cnt = 0
-    with open(path, "r", encoding="utf-8", errors="ignore") as f:
-        for ln in f:
-            if token in ln:
-                cnt += 1
-    return cnt
+    count = 0
+    with open(path, "r", encoding="utf-8", errors="ignore") as fh:
+        for line in fh:
+            if token in line:
+                count += 1
+    return count
 
 
 @dataclass
@@ -38,6 +38,7 @@ class RotorOut:
     index: int
     name: str
     out_dir: str
+    blade_count: int
     has_aero: bool
 
 
@@ -78,15 +79,16 @@ def _scan_blade_counts(rotor_dirs: List[RotorOut]) -> ControlVars:
     n_beams = 0
     n_aero = 0
     for rotor in rotor_dirs:
+        count = getattr(rotor, "blade_count", 1) or 1
         path_nod = os.path.join(rotor.out_dir, "blade.nod")
         path_beam = os.path.join(rotor.out_dir, "blade.beam")
         path_body = os.path.join(rotor.out_dir, "blade.body")
         path_aero = os.path.join(rotor.out_dir, "blade.aerobeam")
 
-        n_nodes += _count_token_lines(path_nod, "structural:")
-        n_bodies += _count_token_lines(path_body, "body:")
-        n_beams += _count_token_lines(path_beam, "beam3:")
-        n_aero += _count_token_lines(path_aero, "aerodynamic beam3:")
+        n_nodes += _count_token_lines(path_nod, "structural:") * count
+        n_bodies += _count_token_lines(path_body, "body:") * count
+        n_beams += _count_token_lines(path_beam, "beam3:") * count
+        n_aero += _count_token_lines(path_aero, "aerodynamic beam3:") * count
 
     return ControlVars(
         num_blade_nodes=n_nodes,
@@ -111,14 +113,17 @@ def write_main_mbd(
     os.makedirs(project_out_dir, exist_ok=True)
     sim = sim or SimParams()
 
-    ctrl = _scan_blade_counts(rotor_outputs)
+    expanded: List[RotorOut] = []
+    for rotor in rotor_outputs:
+        for _ in range(max(1, rotor.blade_count)):
+            expanded.append(RotorOut(rotor.index, rotor.name, rotor.out_dir, 1, rotor.has_aero))
+    ctrl = _scan_blade_counts(expanded)
     if ctrl_override:
         for key, value in ctrl_override.items():
             if hasattr(ctrl, key):
                 setattr(ctrl, key, int(value))
 
     lines: List[str] = []
-
     lines += [
         "begin: data;",
         "    problem: initial value;",
@@ -155,35 +160,35 @@ def write_main_mbd(
     lines += [
         "# CONTROL DATA SECTION",
         "begin: control data;",
-        f"set: const integer num_blade        = {ctrl.num_blade_nodes};      # blade structural nodes (auto)",
-        f"set: const integer num_blade_dynamic= {ctrl.num_blade_bodies};     # blade bodies (auto)",
-        f"set: const integer num_beam         = {ctrl.num_beam};             # blade beams (auto)",
-        f"set: const integer num_aerobeam     = {ctrl.num_aerobeam};         # blade aerodynamic beams (auto)",
-        f"set: const integer num_rotor        = {ctrl.num_rotor_static_nodes};   # rotor static nodes (TBD)",
-        f"set: const integer num_rotor_dynamic= {ctrl.num_rotor_dynamic_bodies}; # yoke/motor bodies (TBD)",
-        f"set: const integer num_force        = {ctrl.num_force};            # external forces (TBD)",
-        f"set: const integer num_joint_rotor  = {ctrl.num_joints_rotor};     # rotor joints (TBD)",
-        f"set: const integer num_joint_by     = {ctrl.num_joints_blade_yoke};# blade-yoke joints (TBD)",
+        f"set: const integer num_blade        = {ctrl.num_blade_nodes};",
+        f"set: const integer num_blade_dynamic= {ctrl.num_blade_bodies};",
+        f"set: const integer num_beam         = {ctrl.num_beam};",
+        f"set: const integer num_aerobeam     = {ctrl.num_aerobeam};",
+        f"set: const integer num_rotor        = {ctrl.num_rotor_static_nodes};",
+        f"set: const integer num_rotor_dynamic= {ctrl.num_rotor_dynamic_bodies};",
+        f"set: const integer num_force        = {ctrl.num_force};",
+        f"set: const integer num_joint_rotor  = {ctrl.num_joints_rotor};",
+        f"set: const integer num_joint_by     = {ctrl.num_joints_blade_yoke};",
         "",
         "    structural nodes:",
-        "        num_blade +              # Blade nodes",
-        "        num_rotor                # Rotor static nodes",
+        "        num_blade +",
+        "        num_rotor",
         "        ;",
         "    rigid bodies:",
-        "        num_blade_dynamic +      # Blade bodies",
-        "        num_rotor_dynamic        # Yoke/Motor bodies",
+        "        num_blade_dynamic +",
+        "        num_rotor_dynamic",
         "        ;",
         "    aerodynamic elements:",
-        "        num_aerobeam             # Blade aerodynamic beams",
+        "        num_aerobeam",
         "        ;",
         "    forces: num_force;",
         "",
         "    beams:",
-        "        num_beam +               # Blade Beams",
+        "        num_beam +",
         "        ;",
         "    joints:",
-        "        num_blade +              # Connection Blade-Yoke (TBD)",
-        "        num_rotor                # Rotor joint (TBD)",
+        "        num_blade +",
+        "        num_rotor",
         "        ;",
         "    inertia: 1;",
         "    air properties;",
@@ -204,41 +209,58 @@ def write_main_mbd(
         lines.append("")
 
     lines += [
-        f"set: const real THETA_COLL =  {theta_coll_deg:.1f}; # input collective angle in deg",
-        "set: const real COLLECTIVE_VERTICAL = 0.000000244350555*THETA_COLL^3 + "
-        "0.000061328077169*THETA_COLL^2 - 0.004217073403049*THETA_COLL + 0.000000119676574;",
+        "set: const integer CURR_ROTOR = 0;",
+        "set: const integer CURR_blade = 0;",
         "",
-        "#defining nodes data",
-        "# Reference frame ",
+        '# Reference frame',
         'include: "GCS.ref";',
         "",
-        "# Blades",
+        "# Blades (refs for each blade copy)",
     ]
 
+    for rotor in rotor_outputs:
+        rotor_base = rotor.index * 100000
+        rel_ref = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.ref"))
+        for blade_idx in range(1, max(1, rotor.blade_count) + 1):
+            blade_base = blade_idx * 10000
+            lines.append(f"set: CURR_ROTOR = {rotor_base};")
+            lines.append(f"set: CURR_blade = {blade_base};")
+            lines.append(f'include: "{rel_ref}";')
+
     if extra_includes_before_nodes:
-        lines.extend(extra_includes_before_nodes)
+        lines += [ln.rstrip() for ln in extra_includes_before_nodes]
         lines.append("")
 
-    for rotor in rotor_outputs:
-        rel = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.ref"))
-        lines.append(f'include: "{rel}";')
     lines += ["", "begin: nodes;", ""]
 
     for rotor in rotor_outputs:
-        rel = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.nod"))
-        lines.append(f'    include: "{rel}";')
-    lines += ["", "end: nodes;", "", "begin: elements;", ""]
+        rotor_base = rotor.index * 100000
+        rel_nod = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.nod"))
+        for blade_idx in range(1, max(1, rotor.blade_count) + 1):
+            blade_base = blade_idx * 10000
+            lines.append(f"    set: CURR_ROTOR = {rotor_base};")
+            lines.append(f"    set: CURR_blade = {blade_base};")
+            lines.append(f'    include: "{rel_nod}";')
+        lines.append("")
+
+    lines += ["end: nodes;", "", "begin: elements;", ""]
 
     for rotor in rotor_outputs:
-        lines += [f"    # --- {rotor.name} ---"]
+        rotor_base = rotor.index * 100000
         rel_beam = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.beam"))
         rel_body = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.body"))
-        lines.append(f'    include: "{rel_beam}";')
-        lines.append(f'    include: "{rel_body}";')
         path_aero = os.path.join(rotor.out_dir, "blade.aerobeam")
-        if _safe_exists(path_aero):
-            rel_aero = _path_rel(project_out_dir, path_aero)
-            lines.append(f'    include: "{rel_aero}";')
+        rel_aero = _path_rel(project_out_dir, path_aero)
+        has_aero = _safe_exists(path_aero)
+        lines.append(f"    # --- {rotor.name} ---")
+        for blade_idx in range(1, max(1, rotor.blade_count) + 1):
+            blade_base = blade_idx * 10000
+            lines.append(f"    set: CURR_ROTOR = {rotor_base};")
+            lines.append(f"    set: CURR_blade = {blade_base};")
+            lines.append(f'    include: "{rel_beam}";')
+            lines.append(f'    include: "{rel_body}";')
+            if has_aero:
+                lines.append(f'    include: "{rel_aero}";')
         lines.append("")
 
     lines += [
