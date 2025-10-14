@@ -11,6 +11,14 @@ from beam import write_beam_file
 from bodies import write_bodies_file
 from gcs import write_gcs_refs
 from grid import BladeGrid, attach_interpolators, build_grid
+from io_blade import AeroData, TipData, load_tip
+from mbd_writer import RotorOut, SimParams, write_main_mbd
+from refs_nodes import write_nodes, write_refs
+from rotors_xml import (
+    RotorCfg,
+    build_aerodata_from_rotor_xml,
+    parse_rotors_xml,
+)
 from io_blade import AeroData, TipData, load_aero, load_tip
 from mbd_writer import RotorOut, SimParams, write_main_mbd
 from refs_nodes import write_nodes, write_refs
@@ -20,6 +28,12 @@ from select_sections import (
     SectionSelectionConfig,
     auto_select_sections,
 )
+
+
+# ==== Global switches (temporary; replace with GlobalSettings.xml later) ====
+# aero_mode: "mbdyn" -> generate blade_aero.ref / blade.aerobeam and include them
+#            "coupled" -> skip aerodynamic outputs and excludes from main.mbd
+AERO_MODE = "mbdyn"
 
 
 @dataclass
@@ -87,11 +101,12 @@ def _write_report(cfg: GenerationConfig, report: SectionReport, extra: Optional[
 def _run_single_blade(
     cfg: GenerationConfig,
     tip_path: str,
-    aero_path: Optional[str],
+    aero_data: Optional[AeroData],
     y_sign: float,
     extra_report_lines: Optional[Iterable[str]] = None,
 ) -> None:
     tip: TipData = load_tip(tip_path, units_policy=cfg.units_tip)
+    aero = aero_data
     aero: Optional[AeroData] = load_aero(aero_path, units_policy=cfg.units_aero) if aero_path else None
 
     sel_cfg = SectionSelectionConfig(
@@ -113,6 +128,7 @@ def _run_single_blade(
     write_beam_file(tip, grid, cfg.name, cfg.nu, os.path.join(cfg.out_dir, "blade.beam"), y_sign=y_sign)
     write_bodies_file(tip, grid, cfg.name, os.path.join(cfg.out_dir, "blade.body"))
     write_aero_refs_file(grid, cfg.name, os.path.join(cfg.out_dir, "blade_aero.ref"))
+    if AERO_MODE == "mbdyn" and aero is not None:
     if aero:
         write_aero_beam_file(aero, grid, cfg.name, os.path.join(cfg.out_dir, "blade.aerobeam"))
 
@@ -152,10 +168,27 @@ def main(argv: Optional[List[str]] = None) -> int:
 
         cfg = GenerationConfig(name=rotor_name, out_dir=rotor_dir)
         y_sign = _y_sign_from_direction(rotor.direction)
+        aero_data: Optional[AeroData] = None
+        if AERO_MODE == "mbdyn" and rotor.aero_start_xyz and rotor.aero_data_block:
+            aero_data = build_aerodata_from_rotor_xml(rotor.aero_start_xyz, rotor.aero_data_block)
         extra_lines = [
             f"rotor_index={rotor.index}",
             f"blade_count={rotor.blade_count}",
             f"direction={rotor.direction}",
+            f"aero_mode={AERO_MODE}",
+        ]
+        _run_single_blade(
+            cfg,
+            rotor.shape_tip_path,
+            aero_data,
+            y_sign,
+            extra_report_lines=extra_lines,
+        )
+
+        has_aero = (
+            AERO_MODE == "mbdyn"
+            and os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
+        )
         ]
         _run_single_blade(cfg, rotor.shape_tip_path, None, y_sign, extra_report_lines=extra_lines)
 
@@ -170,6 +203,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             )
         )
 
+    write_main_mbd(
+        project_out_dir=args.out,
+        rotor_outputs=rotor_outputs,
+        sim=SimParams(),
+        include_aero=(AERO_MODE == "mbdyn"),
+    )
     write_main_mbd(project_out_dir=args.out, rotor_outputs=rotor_outputs, sim=SimParams())
     print(f"Done. Outputs in: {args.out}")
     return 0

@@ -107,6 +107,7 @@ def write_main_mbd(
     extra_includes_before_nodes: Optional[List[str]] = None,
     extra_elements_lines: Optional[List[str]] = None,
     theta_coll_deg: float = 5.0,
+    include_aero: bool = True,
 ) -> str:
     """Write main.mbd under ``project_out_dir`` and return the file path."""
 
@@ -118,6 +119,8 @@ def write_main_mbd(
         for _ in range(max(1, rotor.blade_count)):
             expanded.append(RotorOut(rotor.index, rotor.name, rotor.out_dir, 1, rotor.has_aero))
     ctrl = _scan_blade_counts(expanded)
+    if not include_aero:
+        ctrl.num_aerobeam = 0
     if ctrl_override:
         for key, value in ctrl_override.items():
             if hasattr(ctrl, key):
@@ -251,6 +254,7 @@ def write_main_mbd(
         rel_body = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.body"))
         path_aero = os.path.join(rotor.out_dir, "blade.aerobeam")
         rel_aero = _path_rel(project_out_dir, path_aero)
+        has_aero = include_aero and _safe_exists(path_aero)
         has_aero = _safe_exists(path_aero)
         lines.append(f"    # --- {rotor.name} ---")
         for blade_idx in range(1, max(1, rotor.blade_count) + 1):
