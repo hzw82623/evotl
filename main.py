@@ -129,7 +129,6 @@ def _run_single_blade(
     write_bodies_file(tip, grid, cfg.name, os.path.join(cfg.out_dir, "blade.body"))
     write_aero_refs_file(grid, cfg.name, os.path.join(cfg.out_dir, "blade_aero.ref"))
     if AERO_MODE == "mbdyn" and aero is not None:
-    if aero:
         write_aero_beam_file(aero, grid, cfg.name, os.path.join(cfg.out_dir, "blade.aerobeam"))
 
     _write_report(cfg, report, extra_report_lines)
@@ -175,7 +174,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             f"rotor_index={rotor.index}",
             f"blade_count={rotor.blade_count}",
             f"direction={rotor.direction}",
-            f"aero_mode={AERO_MODE}"
             f"aero_mode={AERO_MODE}",
         ]
         _run_single_blade(
@@ -190,16 +188,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             AERO_MODE == "mbdyn"
             and os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
         )
-        rotor_out = RotorOut(
-            index=rotor.index,
-            name=rotor_name,
-            out_dir=rotor_dir,
-            blade_count=max(1, rotor.blade_count),
-            has_aero=has_aero,
-        ]
-        _run_single_blade(cfg, rotor.shape_tip_path, None, y_sign, extra_report_lines=extra_lines)
-
-        has_aero = os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
         rotor_outputs.append(
             RotorOut(
                 index=rotor.index,
@@ -209,7 +197,6 @@ def main(argv: Optional[List[str]] = None) -> int:
                 has_aero=has_aero,
             )
         )
-        rotor_outputs.append(rotor_out)
 
     write_main_mbd(
         project_out_dir=args.out,
@@ -217,7 +204,6 @@ def main(argv: Optional[List[str]] = None) -> int:
         sim=SimParams(),
         include_aero=(AERO_MODE == "mbdyn"),
     )
-    write_main_mbd(project_out_dir=args.out, rotor_outputs=rotor_outputs, sim=SimParams())
     print(f"Done. Outputs in: {args.out}")
     return 0
 
