@@ -175,6 +175,7 @@ def main(argv: Optional[List[str]] = None) -> int:
             f"rotor_index={rotor.index}",
             f"blade_count={rotor.blade_count}",
             f"direction={rotor.direction}",
+            f"aero_mode={AERO_MODE}"
             f"aero_mode={AERO_MODE}",
         ]
         _run_single_blade(
@@ -189,6 +190,12 @@ def main(argv: Optional[List[str]] = None) -> int:
             AERO_MODE == "mbdyn"
             and os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
         )
+        rotor_out = RotorOut(
+            index=rotor.index,
+            name=rotor_name,
+            out_dir=rotor_dir,
+            blade_count=max(1, rotor.blade_count),
+            has_aero=has_aero,
         ]
         _run_single_blade(cfg, rotor.shape_tip_path, None, y_sign, extra_report_lines=extra_lines)
 
@@ -202,6 +209,7 @@ def main(argv: Optional[List[str]] = None) -> int:
                 has_aero=has_aero,
             )
         )
+        rotor_outputs.append(rotor_out)
 
     write_main_mbd(
         project_out_dir=args.out,
