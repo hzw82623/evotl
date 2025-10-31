@@ -193,19 +193,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             )
         )
 
-    xml_dir = os.path.dirname(args.rotors_xml)
-    frame_node_includes, frame_element_includes = gen_frameargu(
-        aer_frameargu_xml=os.path.join(xml_dir, "aer_frameargu.xml"),
-        out_dir=args.out,
-    )
-    motor_node_includes, motor_element_includes = gen_motor(
-        act_motor_xml=os.path.join(xml_dir, "act_motor.xml"),
-        out_dir=args.out,
-    )
-
-    extra_node_includes: List[str] = frame_node_includes + motor_node_includes
-    extra_element_includes: List[str] = frame_element_includes + motor_element_includes
-
     write_main_mbd(
         project_out_dir=args.out,
         rotor_outputs=rotor_outputs,
