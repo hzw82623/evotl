@@ -13,6 +13,8 @@ from gcs import write_gcs_refs
 from grid import BladeGrid, attach_interpolators, build_grid
 from io_blade import AeroData, TipData, load_tip
 from mbd_writer import RotorOut, SimParams, write_main_mbd
+from gen_frameargu import generate as gen_frameargu
+from gen_motor import generate as gen_motor
 from refs_nodes import write_nodes, write_refs
 from rotors_xml import (
     RotorCfg,
@@ -24,8 +26,6 @@ from select_sections import (
     SectionSelectionConfig,
     auto_select_sections,
 )
-
-
 # ==== Global switches (temporary; replace with GlobalSettings.xml later) ====
 # aero_mode: "mbdyn" -> generate blade_aero.ref / blade.aerobeam and include them
 #            "coupled" -> skip aerodynamic outputs and excludes from main.mbd
@@ -198,6 +198,8 @@ def main(argv: Optional[List[str]] = None) -> int:
         rotor_outputs=rotor_outputs,
         sim=SimParams(),
         include_aero=(AERO_MODE == "mbdyn"),
+        extra_node_includes=extra_node_includes,
+        extra_element_includes=extra_element_includes,
     )
     print(f"Done. Outputs in: {args.out}")
     return 0

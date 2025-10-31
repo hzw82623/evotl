@@ -108,6 +108,9 @@ def write_main_mbd(
     extra_elements_lines: Optional[List[str]] = None,
     theta_coll_deg: float = 5.0,
     include_aero: bool = True,
+    *,
+    extra_node_includes: Optional[List[str]] = None,
+    extra_element_includes: Optional[List[str]] = None,
 ) -> str:
     """Write main.mbd under ``project_out_dir`` and return the file path."""
 
@@ -236,6 +239,10 @@ def write_main_mbd(
 
     lines += ["", "begin: nodes;", ""]
 
+    if extra_node_includes:
+        lines += [ln.rstrip() for ln in extra_node_includes]
+        lines.append("")
+
     for rotor in rotor_outputs:
         rotor_base = rotor.index * 100000
         rel_nod = _path_rel(project_out_dir, os.path.join(rotor.out_dir, "blade.nod"))
@@ -255,7 +262,6 @@ def write_main_mbd(
         path_aero = os.path.join(rotor.out_dir, "blade.aerobeam")
         rel_aero = _path_rel(project_out_dir, path_aero)
         has_aero = include_aero and _safe_exists(path_aero)
-        has_aero = _safe_exists(path_aero)
         lines.append(f"    # --- {rotor.name} ---")
         for blade_idx in range(1, max(1, rotor.blade_count) + 1):
             blade_base = blade_idx * 10000
@@ -273,6 +279,10 @@ def write_main_mbd(
         "        #cosine, 15., pi/10, WIND_SPEED/2, half, 0.;",
         "",
     ]
+
+    if extra_element_includes:
+        lines += [ln.rstrip() for ln in extra_element_includes]
+        lines.append("")
 
     if extra_elements_lines:
         lines += [ln.rstrip() for ln in extra_elements_lines]
