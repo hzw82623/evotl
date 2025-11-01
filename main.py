@@ -13,23 +13,19 @@ from gcs import write_gcs_refs
 from grid import BladeGrid, attach_interpolators, build_grid
 from io_blade import AeroData, TipData, load_tip
 from mbd_writer import RotorOut, SimParams, write_main_mbd
+from gen_frameargu import generate as gen_frameargu
+from gen_motor import generate as gen_motor
 from refs_nodes import write_nodes, write_refs
 from rotors_xml import (
     RotorCfg,
     build_aerodata_from_rotor_xml,
     parse_rotors_xml,
 )
-from io_blade import AeroData, TipData, load_aero, load_tip
-from mbd_writer import RotorOut, SimParams, write_main_mbd
-from refs_nodes import write_nodes, write_refs
-from rotors_xml import RotorCfg, parse_rotors_xml
 from select_sections import (
     SectionReport,
     SectionSelectionConfig,
     auto_select_sections,
 )
-
-
 # ==== Global switches (temporary; replace with GlobalSettings.xml later) ====
 # aero_mode: "mbdyn" -> generate blade_aero.ref / blade.aerobeam and include them
 #            "coupled" -> skip aerodynamic outputs and excludes from main.mbd
@@ -107,7 +103,6 @@ def _run_single_blade(
 ) -> None:
     tip: TipData = load_tip(tip_path, units_policy=cfg.units_tip)
     aero = aero_data
-    aero: Optional[AeroData] = load_aero(aero_path, units_policy=cfg.units_aero) if aero_path else None
 
     sel_cfg = SectionSelectionConfig(
         r_start=cfg.r_start,
@@ -129,7 +124,6 @@ def _run_single_blade(
     write_bodies_file(tip, grid, cfg.name, os.path.join(cfg.out_dir, "blade.body"))
     write_aero_refs_file(grid, cfg.name, os.path.join(cfg.out_dir, "blade_aero.ref"))
     if AERO_MODE == "mbdyn" and aero is not None:
-    if aero:
         write_aero_beam_file(aero, grid, cfg.name, os.path.join(cfg.out_dir, "blade.aerobeam"))
 
     _write_report(cfg, report, extra_report_lines)
@@ -175,7 +169,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             f"rotor_index={rotor.index}",
             f"blade_count={rotor.blade_count}",
             f"direction={rotor.direction}",
-            f"aero_mode={AERO_MODE}"
             f"aero_mode={AERO_MODE}",
         ]
         _run_single_blade(
@@ -190,16 +183,6 @@ def main(argv: Optional[List[str]] = None) -> int:
             AERO_MODE == "mbdyn"
             and os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
         )
-        rotor_out = RotorOut(
-            index=rotor.index,
-            name=rotor_name,
-            out_dir=rotor_dir,
-            blade_count=max(1, rotor.blade_count),
-            has_aero=has_aero,
-        ]
-        _run_single_blade(cfg, rotor.shape_tip_path, None, y_sign, extra_report_lines=extra_lines)
-
-        has_aero = os.path.isfile(os.path.join(rotor_dir, "blade.aerobeam"))
         rotor_outputs.append(
             RotorOut(
                 index=rotor.index,
@@ -209,15 +192,28 @@ def main(argv: Optional[List[str]] = None) -> int:
                 has_aero=has_aero,
             )
         )
-        rotor_outputs.append(rotor_out)
+
+    xml_dir = os.path.dirname(args.rotors_xml)
+    frame_node_includes, frame_element_includes = gen_frameargu(
+        aer_frameargu_xml=os.path.join(xml_dir, "aer_frameargu.xml"),
+        out_dir=args.out,
+    )
+    motor_node_includes, motor_element_includes = gen_motor(
+        act_motor_xml=os.path.join(xml_dir, "act_motor.xml"),
+        out_dir=args.out,
+    )
+
+    extra_node_includes: List[str] = frame_node_includes + motor_node_includes
+    extra_element_includes: List[str] = frame_element_includes + motor_element_includes
 
     write_main_mbd(
         project_out_dir=args.out,
         rotor_outputs=rotor_outputs,
         sim=SimParams(),
         include_aero=(AERO_MODE == "mbdyn"),
+        extra_node_includes=extra_node_includes,
+        extra_element_includes=extra_element_includes,
     )
-    write_main_mbd(project_out_dir=args.out, rotor_outputs=rotor_outputs, sim=SimParams())
     print(f"Done. Outputs in: {args.out}")
     return 0
 
